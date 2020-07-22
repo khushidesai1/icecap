@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "74553ef1454b69459b8f9992e1ad5fd5",
+    "revision": "c024252beb19559d8147124e6853219b",
     "url": "/icecap/index.html"
   },
   {
-    "revision": "bafd3c666e0a577f6973",
+    "revision": "5f22fc2c6d578eec9c87",
     "url": "/icecap/static/css/main.762afb32.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/icecap/static/js/2.8ed82158.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bafd3c666e0a577f6973",
-    "url": "/icecap/static/js/main.1876961f.chunk.js"
+    "revision": "5f22fc2c6d578eec9c87",
+    "url": "/icecap/static/js/main.3eba2f50.chunk.js"
   },
   {
     "revision": "92e2aee28427d8a5a8c6",
