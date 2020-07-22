@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/icecap/static/css/main.762afb32.chunk.css",
-    "main.js": "/icecap/static/js/main.66d81333.chunk.js",
-    "main.js.map": "/icecap/static/js/main.66d81333.chunk.js.map",
+    "main.js": "/icecap/static/js/main.1876961f.chunk.js",
+    "main.js.map": "/icecap/static/js/main.1876961f.chunk.js.map",
     "runtime-main.js": "/icecap/static/js/runtime-main.0fe271a5.js",
     "runtime-main.js.map": "/icecap/static/js/runtime-main.0fe271a5.js.map",
-    "static/js/2.18299ce5.chunk.js": "/icecap/static/js/2.18299ce5.chunk.js",
-    "static/js/2.18299ce5.chunk.js.map": "/icecap/static/js/2.18299ce5.chunk.js.map",
+    "static/js/2.8ed82158.chunk.js": "/icecap/static/js/2.8ed82158.chunk.js",
+    "static/js/2.8ed82158.chunk.js.map": "/icecap/static/js/2.8ed82158.chunk.js.map",
     "index.html": "/icecap/index.html",
-    "precache-manifest.032d5946686434212fda8080a0c0afab.js": "/icecap/precache-manifest.032d5946686434212fda8080a0c0afab.js",
+    "precache-manifest.d5cc21fde8d668ac7ff412fb34ff4428.js": "/icecap/precache-manifest.d5cc21fde8d668ac7ff412fb34ff4428.js",
     "service-worker.js": "/icecap/service-worker.js",
     "static/css/main.762afb32.chunk.css.map": "/icecap/static/css/main.762afb32.chunk.css.map",
-    "static/js/2.18299ce5.chunk.js.LICENSE.txt": "/icecap/static/js/2.18299ce5.chunk.js.LICENSE.txt",
+    "static/js/2.8ed82158.chunk.js.LICENSE.txt": "/icecap/static/js/2.8ed82158.chunk.js.LICENSE.txt",
     "static/media/Component.css": "/icecap/static/media/upload.2cb3f39e.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.0fe271a5.js",
-    "static/js/2.18299ce5.chunk.js",
+    "static/js/2.8ed82158.chunk.js",
     "static/css/main.762afb32.chunk.css",
-    "static/js/main.66d81333.chunk.js"
+    "static/js/main.1876961f.chunk.js"
   ]
 }
