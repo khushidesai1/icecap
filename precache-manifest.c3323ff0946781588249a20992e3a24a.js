@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5ee97e554c643a24c9ebfc992763581a",
+    "revision": "27daac7b8be06ae06be90b5cd2ef5f9d",
     "url": "/icecap/index.html"
   },
   {
-    "revision": "ce4175d74948aa0ba9b7",
-    "url": "/icecap/static/css/main.762afb32.chunk.css"
+    "revision": "a5a0cdf82bded92dba72",
+    "url": "/icecap/static/css/main.7a632d62.chunk.css"
   },
   {
-    "revision": "04b15362dbe6807b7a49",
-    "url": "/icecap/static/js/2.f6f0c126.chunk.js"
+    "revision": "2117ee5e31895e2b31f2",
+    "url": "/icecap/static/js/2.87c7b5e5.chunk.js"
   },
   {
     "revision": "89b0379e7bcda1a468d8b0343aeb4e53",
-    "url": "/icecap/static/js/2.f6f0c126.chunk.js.LICENSE.txt"
+    "url": "/icecap/static/js/2.87c7b5e5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ce4175d74948aa0ba9b7",
-    "url": "/icecap/static/js/main.0ce85ed8.chunk.js"
+    "revision": "a5a0cdf82bded92dba72",
+    "url": "/icecap/static/js/main.986e2967.chunk.js"
   },
   {
     "revision": "92e2aee28427d8a5a8c6",
@@ -44,16 +44,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/icecap/static/media/light_mountain_image.66e668d5.jpg"
   },
   {
-    "revision": "9c5a9565187b4d4e7180c61eee94c86f",
-    "url": "/icecap/static/media/live_chooseops.9c5a9565.gif"
+    "revision": "08b1fc624e243aff788d72414373650e",
+    "url": "/icecap/static/media/live_chooseops.08b1fc62.gif"
   },
   {
-    "revision": "24b09f097c832774696a97157e78c62b",
-    "url": "/icecap/static/media/live_download.24b09f09.gif"
+    "revision": "d36cd94df557e4ea41a96712d958ae53",
+    "url": "/icecap/static/media/live_download.d36cd94d.gif"
   },
   {
-    "revision": "5ffdf15080d3625405c87d5fd4c380f5",
-    "url": "/icecap/static/media/live_upload.5ffdf150.gif"
+    "revision": "4c8d35adecc4ad6c65dc8a84ca16d10a",
+    "url": "/icecap/static/media/live_upload.4c8d35ad.gif"
   },
   {
     "revision": "792b14289f2337007410282e4b2459d9",
