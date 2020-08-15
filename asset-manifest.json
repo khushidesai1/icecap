@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/icecap/static/css/main.7a632d62.chunk.css",
-    "main.js": "/icecap/static/js/main.986e2967.chunk.js",
-    "main.js.map": "/icecap/static/js/main.986e2967.chunk.js.map",
+    "main.css": "/icecap/static/css/main.b2039d06.chunk.css",
+    "main.js": "/icecap/static/js/main.8213cbd2.chunk.js",
+    "main.js.map": "/icecap/static/js/main.8213cbd2.chunk.js.map",
     "runtime-main.js": "/icecap/static/js/runtime-main.0fe271a5.js",
     "runtime-main.js.map": "/icecap/static/js/runtime-main.0fe271a5.js.map",
-    "static/js/2.87c7b5e5.chunk.js": "/icecap/static/js/2.87c7b5e5.chunk.js",
-    "static/js/2.87c7b5e5.chunk.js.map": "/icecap/static/js/2.87c7b5e5.chunk.js.map",
+    "static/js/2.2387b51a.chunk.js": "/icecap/static/js/2.2387b51a.chunk.js",
+    "static/js/2.2387b51a.chunk.js.map": "/icecap/static/js/2.2387b51a.chunk.js.map",
     "index.html": "/icecap/index.html",
-    "precache-manifest.c3323ff0946781588249a20992e3a24a.js": "/icecap/precache-manifest.c3323ff0946781588249a20992e3a24a.js",
+    "precache-manifest.057039783085d1d47b27bef8a573cc68.js": "/icecap/precache-manifest.057039783085d1d47b27bef8a573cc68.js",
     "service-worker.js": "/icecap/service-worker.js",
-    "static/css/main.7a632d62.chunk.css.map": "/icecap/static/css/main.7a632d62.chunk.css.map",
-    "static/js/2.87c7b5e5.chunk.js.LICENSE.txt": "/icecap/static/js/2.87c7b5e5.chunk.js.LICENSE.txt",
+    "static/css/main.b2039d06.chunk.css.map": "/icecap/static/css/main.b2039d06.chunk.css.map",
+    "static/js/2.2387b51a.chunk.js.LICENSE.txt": "/icecap/static/js/2.2387b51a.chunk.js.LICENSE.txt",
     "static/media/Component.css": "/icecap/static/media/upload.2cb3f39e.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.0fe271a5.js",
-    "static/js/2.87c7b5e5.chunk.js",
-    "static/css/main.7a632d62.chunk.css",
-    "static/js/main.986e2967.chunk.js"
+    "static/js/2.2387b51a.chunk.js",
+    "static/css/main.b2039d06.chunk.css",
+    "static/js/main.8213cbd2.chunk.js"
   ]
 }

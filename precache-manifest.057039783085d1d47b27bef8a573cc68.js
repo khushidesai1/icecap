@@ -1,35 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "27daac7b8be06ae06be90b5cd2ef5f9d",
+    "revision": "dd6a548dd3649118ea8cc1613d27d63e",
     "url": "/icecap/index.html"
   },
   {
-    "revision": "a5a0cdf82bded92dba72",
-    "url": "/icecap/static/css/main.7a632d62.chunk.css"
+    "revision": "70b2c7ce8ba9524624ac",
+    "url": "/icecap/static/css/main.b2039d06.chunk.css"
   },
   {
-    "revision": "2117ee5e31895e2b31f2",
-    "url": "/icecap/static/js/2.87c7b5e5.chunk.js"
+    "revision": "10824106b4fa6ad900a8",
+    "url": "/icecap/static/js/2.2387b51a.chunk.js"
   },
   {
     "revision": "89b0379e7bcda1a468d8b0343aeb4e53",
-    "url": "/icecap/static/js/2.87c7b5e5.chunk.js.LICENSE.txt"
+    "url": "/icecap/static/js/2.2387b51a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a5a0cdf82bded92dba72",
-    "url": "/icecap/static/js/main.986e2967.chunk.js"
+    "revision": "70b2c7ce8ba9524624ac",
+    "url": "/icecap/static/js/main.8213cbd2.chunk.js"
   },
   {
     "revision": "92e2aee28427d8a5a8c6",
     "url": "/icecap/static/js/runtime-main.0fe271a5.js"
-  },
-  {
-    "revision": "2d0bdc8df10dee036ca3bedf6f3647c6",
-    "url": "/icecap/static/media/OpenSans-Light.2d0bdc8d.ttf"
-  },
-  {
-    "revision": "ba5cde21eeea0d57ab7efefc99596cce",
-    "url": "/icecap/static/media/OpenSans-SemiBold.ba5cde21.ttf"
   },
   {
     "revision": "20f06b904a7a6a978091b96cfe345ae1",
