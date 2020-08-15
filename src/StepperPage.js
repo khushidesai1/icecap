@@ -61,7 +61,7 @@ function VerticalLinearStepper(props) {
         color: props.tColor,
     },
     text: {
-      fontFamily: 'Open-Sans',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
     },
   }));
 

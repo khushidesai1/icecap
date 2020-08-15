@@ -22,6 +22,7 @@ import MultiLines from './operations/MultiLines';
 import "ace-builds/src-noconflict/mode-java";
 import "ace-builds/src-noconflict/theme-katzenmilch";
 import "ace-builds/src-noconflict/theme-nord_dark";
+import IncorrectJavadocs from './operations/IncorrectJavadocs';
 
 /**
  * The EditorPage component.
@@ -77,7 +78,7 @@ export default function EditorPage(props) {
             color: props.tColor,
             fontSize: '17px',
             fontWeight: 400,
-            fontFamily: 'Open-Sans',
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
         },
         paper: {
             '& > *': {
@@ -97,7 +98,7 @@ export default function EditorPage(props) {
             '&:hover': {
               backgroundColor: '#537b86',
             },
-            fontFamily: 'Open-Sans',
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
             fontWeight: 600,
         },
         clearButton: {
@@ -108,7 +109,7 @@ export default function EditorPage(props) {
             display: 'none',
         },
         smallHeading: {
-            fontFamily: 'Open-Sans',
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
             fontWeight: 600,
             fontSize: 11,
             color: props.tColor
@@ -118,7 +119,7 @@ export default function EditorPage(props) {
             color: "#C0C0C0",
             marginTop: theme.spacing(1),
             marginRight: theme.spacing(1),
-            fontFamily: 'Open-Sans',
+            fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
             fontWeight: 600,
             '&:hover': {
                 backgroundColor: '#D3D3D3',
@@ -187,6 +188,7 @@ export default function EditorPage(props) {
     const [diffVal, setDiffVal] = React.useState([]);
     const [markLongLinesToggle, setMarkLongLinesToggle] = React.useState(false);
     const [markLongMethodsToggle, setMarkLongMethodsToggle] = React.useState(false);
+    const [markIncorrectJavadocsToggle, setMarkIncorrectJavadocsToggle] = React.useState(false);
     const operations = [
         { value: 0, label: 'Remove Javadocs' },
         { value: 1, label: 'Remove // Comments' },
@@ -194,23 +196,6 @@ export default function EditorPage(props) {
         { value: 3, label: 'Add Javadocs' },
         { value: 4, label: 'Fix Whitespaces' },
     ];
-
-    // function handleClear() {
-    //     setInputText("");
-    //     setFileTextList([]);
-    //     setUploadedFiles([]);
-    //     setFileName("");
-    //     setNewFileName("");
-    //     setIndex(0);
-    //     setIsEditing(false);
-    //     setChosenOperations([]);
-    //     setFirstDisplay("");
-    //     setSecondDisplay("");
-    //     setOpenField(false);
-    //     setFixedText("");
-    //     setOpenDiff(false);
-    //     setDiffVal([]);
-    // }
 
     /**
      * Takes in a new text and updates the states and display
@@ -458,6 +443,10 @@ export default function EditorPage(props) {
             var longMethods = new LongMethods();
             newText = longMethods.markLongMethods(newText);
         }
+        if (markIncorrectJavadocsToggle) {
+            var incorrectJavadocs = new IncorrectJavadocs();
+            newText = incorrectJavadocs.markIncorrectJavadocs(newText);
+        }
         setSecondDisplay(newText);
         setFixedText(newText);
     }
@@ -584,8 +573,18 @@ export default function EditorPage(props) {
         setMarkLongLinesToggle(event.target.checked);
     };
 
+    /**
+     * Handles the selection of the long methods option.
+     */
     const handleLongMethodsCheck = (event) => {
         setMarkLongMethodsToggle(event.target.checked);
+    }
+
+    /**
+     * Handles the selection of the incorrect javadocs option.
+     */
+    const handleIncorrectJavadocsCheck = (event) => {
+        setMarkIncorrectJavadocsToggle(event.target.checked);
     }
 
     return(
@@ -715,8 +714,37 @@ export default function EditorPage(props) {
                                         }
                                     />
                                 </ThemeProvider>
+                                <ThemeProvider theme={textTheme}>
+                                    <FormControlLabel
+                                        style={{ width: window.innerWidth/6.6 }}
+                                        classes={formControlLabelStyles}
+                                        control={
+                                            <ThemeProvider theme={textTheme}>
+                                                <Checkbox
+                                                    checked={markIncorrectJavadocsToggle}
+                                                    style={{ borderColor: myColor, color: myColor, alignSelf: 'flex-start', marginTop: -3 }}
+                                                    disableRipple
+                                                    classes={neonStyles}
+                                                    checkedIcon={<span />}
+                                                    icon={<span />}
+                                                    onChange={handleIncorrectJavadocsCheck}
+                                                />
+                                            </ThemeProvider>
+                                        }
+                                        label={
+                                        <>
+                                            <Typography style={{ color: props.tColor }}>
+                                                Mark incorrect javadocs
+                                            </Typography>
+                                            <Typography component="span" style={{ color: props.iColor }}>
+                                                Marks existing incorrect javadocs
+                                            </Typography>
+                                        </>
+                                        }
+                                    />
+                                </ThemeProvider>
                                 <p></p>
-                                {(chosenOperations.length === 0 && !markLongLinesToggle) || firstDisplay === ""  ? <Button variant="contained" disableElevation disableRipple className={itemClasses.disableButton}>Run</Button> :
+                                {(chosenOperations.length === 0 && !markLongLinesToggle && !markLongMethodsToggle && !markIncorrectJavadocsToggle) || firstDisplay === ""  ? <Button variant="contained" disableElevation disableRipple className={itemClasses.disableButton}>Run</Button> :
                                 <Button disableElevation variant="contained" className={itemClasses.button} onClick={handleRun}>Run</Button>}
                                 <div style={{ whiteSpace: 'break-spaces', minHeight: window.innerHeight/20 }}>
                                     <p></p>

@@ -9,9 +9,6 @@ import './components/Component.css';
  */
 export default function MainInfoPage(props) {
 
-  // const LIVE = 1;
-  // const TUTORIAL = 3;
-
   /**
    * Styles used to customize text and other components within the
    * MainInfoPage.
@@ -32,7 +29,7 @@ export default function MainInfoPage(props) {
       color: props.tColor,
       fontWeight: 600,
       fontSize: '150px',
-      fontFamily: 'Open-Sans',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       marginLeft: theme.spacing(10),
       marginTop: theme.spacing(15),
       marginRight: theme.spacing(1),
@@ -43,7 +40,7 @@ export default function MainInfoPage(props) {
       color: props.tColor,
       fontSize: '35px',
       fontWeight: 600,
-      fontFamily: 'Open-Sans',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       marginLeft: theme.spacing(11),
       marginRight: theme.spacing(1),
     },
@@ -53,7 +50,7 @@ export default function MainInfoPage(props) {
       color: props.tColor,
       fontSize: '18px',
       fontWeight: 600,
-      fontFamily: 'Open-Sans',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       marginLeft: theme.spacing(11),
       marginTop: theme.spacing(2),
       marginRight: theme.spacing(8),
@@ -61,6 +58,7 @@ export default function MainInfoPage(props) {
     button: {
       display: 'flex',
       flexWrap: 'wrap',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       backgroundColor: props.tColor,
       color: props.bColor,
       marginTop: theme.spacing(5),
@@ -71,6 +69,7 @@ export default function MainInfoPage(props) {
       display: 'flex',
       flexWrap: 'wrap',
       backgroundColor: props.tColor,
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       color: props.bColor,
       marginRight: theme.spacing(1),
       marginLeft: theme.spacing(11),
@@ -80,6 +79,7 @@ export default function MainInfoPage(props) {
     buttonDiv: {
       display: 'flex',
       flexDirection: 'row',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       flex: 1,
     }
   }));
@@ -88,14 +88,6 @@ export default function MainInfoPage(props) {
    * The styles used in the components below.
    */
   const classes = mainStyles();
-
-  // const goToEditor = () => {
-  //   props.screenChangeCallback(LIVE);
-  // }
-
-  // const goToTutorial = () => {
-  //   props.screenChangeCallback(TUTORIAL);
-  // }
 
   /**
    * The components that make up the MainInfoPage.
@@ -106,7 +98,7 @@ export default function MainInfoPage(props) {
         <div>  
           <Typography className={classes.mainText}>ICEcΔp</Typography>
           <Typography className={classes.subMainText}>
-            (Interactive Convention Editor)
+            Interactive Convention Editor
           </Typography>
           <Typography className={classes.subText}>
             We all have faced issues with the 200+ style check errors that appear right when we are ready to submit our CS 61B

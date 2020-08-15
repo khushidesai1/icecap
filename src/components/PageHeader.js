@@ -36,18 +36,18 @@ export default function PageHeader(props) {
       backgroundColor: props.hColor
     },
     menuText: {
-      fontFamily: 'Open-Sans',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       fontWeight: 600,
       color: props.tColor,
     },
     title: {
       flexGrow: 1,
       color: props.tColor,
-      fontFamily: 'Open-Sans',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       fontWeight: 600,
     },
     button: {
-      fontFamily: 'Open-Sans',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       fontWeight: 600,
       color: props.tColor,
     },

@@ -1,20 +1,14 @@
 /**
- * Javadocs class that adds java doc comment templates
- * to the provided java code.
+ * IncorrectJavadocs class that marks existing
+ * javadocs based on their correctness.
  */
-export default class Javadocs {
+export default class IncorrectJavadocs {
 
     /**
-     * Default constructor for the Javadocs class.
-     * Contains information about javadoc class and method
-     * formats, and method and class patterns.
+     * Default constructor for the IncorrectJavadocs 
+     * class. 
      */
     constructor() {
-        this.classJavadoc =
-            "/**\n" + 
-            " * {CLASS DESCRIPTION}\n" + 
-            " * @author {YOUR NAME}\n" + 
-            " */\n";
         this.methodPattern = new RegExp(
             "(\\p{Space})*(public |protected |private )?" +
             "(static )?" +
@@ -31,17 +25,14 @@ export default class Javadocs {
             "(extends |implements )?" +
             "([a-zA-Z0-9]+) ?\\{"
         );
-
     }
 
     /**
-     * Adds javadoc comment templates before each method and 
-     * class header. Highlights incorrect javadoc comments
-     * with a header in order to notify the user to change
-     * the javadoc format.
+     * Marks existing javadocs based on whether they are 
+     * following the cs 61b style guidelines.
      * @param {String} content the content of the original file.
      */
-    addJavadocs(content) {
+    markIncorrectJavadocs(content) {
         var fileContent = "";
         var javadocFound = false;
         var lineNum = 1;
@@ -82,12 +73,16 @@ export default class Javadocs {
             } else if (this.methodPattern.exec(lineTrim)) {
                 if (!overrideFound) {
                     if (javadoc !== "") {
-                        fileContent += javadoc;
+                        if (this.validateJavadocComment(line, javadoc)) {
+                            fileContent += javadoc;
+                        } else {
+                            fileContent += "------- INCORRECT JAVADOC FORMAT -------\n";
+                            fileContent += javadoc;
+                            fileContent += "----------------------------------------\n";
+                        }
                         fileContent += line + newline;
                         javadoc = "";
                     } else {
-                        var comment = this.generateMethodJavadoc(line);
-                        fileContent += comment;
                         fileContent += line + newline;
                     }
                 } else {
@@ -95,11 +90,16 @@ export default class Javadocs {
                 }
             } else if (this.classPattern.exec(line)) {
                 if (javadoc !== "") {
-                    fileContent += javadoc;
+                    if (this.validateClassJavadocComment(javadoc)) {
+                        fileContent += javadoc;
+                    } else {
+                        fileContent += "------- ADD @AUTHOR TAG TO JAVADOC -------\n";
+                        fileContent += javadoc;
+                        fileContent += "----------------------------------------\n";
+                    }
                     fileContent += line + newline;
                     javadoc = "";
                 } else {
-                    fileContent += this.classJavadoc;
                     fileContent += line + newline;
                 }
             } else {
@@ -115,37 +115,39 @@ export default class Javadocs {
     }
 
     /**
-     * Returns a javadoc template for a method header provided.
+     * Returns true if the provided javadoc comment and 
+     * the header are of correct format according 
+     * to the style guide and false otherwise.
      * @param {String} header the method header.
+     * @param {String} javadocComment the provided javadoc comment.
      */
-    generateMethodJavadoc(header) {
-        var params = this.countParameters(header);
+    validateJavadocComment(header, javadocComment) {
         var returnVal = this.containsReturn(header);
-        var indentation = this.countIndentations(header);
         var paramNames = this.getParamList(header);
-        var indent = "";
-        var i;
-        for (i = 0; i < indentation; i++) {
-            indent += "\t";
-        }
-        var comment = indent + "/**\n" + indent + " * {METHOD DESCRIPTION}\n";
-        for (i = 0; i < params; i++) {
-            comment = comment + indent + " * @param " + paramNames[i] + " {PARAM DESCRIPTION}\n";
-        }
+        var javadocLower = javadocComment.toLowerCase();
         if (returnVal) {
-            comment = comment + indent + " * @return {RETURN DESCRIPTION}\n";
+            if (!(javadocLower.includes("@return") || javadocLower.includes("returns")
+                || javadocLower.includes("returning") || javadocLower.includes("return"))) {
+                return false;
+            }
         }
-        comment = comment + indent + " */\n";
-        return comment;
+        var i;
+        for (i = 0; i < paramNames; i++) {
+            if (!(javadocComment.contains("@param " + paramNames[i]) || javadocComment.contains(paramNames[i].toUpperCase()))) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
-     * Returns the number of parameters in the provided method 
-     * header.
-     * @param {String} header the method header. 
+     * Returns true if the provided class javadoc comment
+     * is of correct format according to
+     * the style guide and false otherwise.
+     * @param {String} classJavadocComment the provided class javadoc comment.
      */
-    countParameters(header) {
-        return this.getParamList(header).length;
+    validateClassJavadocComment(classJavadocComment) {
+        return classJavadocComment.includes("@author");
     }
 
     /**
@@ -178,29 +180,5 @@ export default class Javadocs {
      */
     containsReturn(header) {
         return !header.includes("void");
-    }
-
-    /**
-     * Returns the number of indentations before the method
-     * header provided.
-     * @param {String} header the method header. 
-     */
-    countIndentations(header) {
-        var count = 0;
-        var spaceCount = 0;
-        var i = 0;
-        for (i = 0; i < header.length; i++) {
-            var c = header.charAt(i);
-            if (c !== '\t' && c !== ' ') {
-                break;
-            }
-            if (c === '\t') {
-                count += 1;
-            }
-            if (c === ' ') {
-                spaceCount++;
-            }
-        }
-        return count + (spaceCount / 4);
     }
 }

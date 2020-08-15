@@ -79,18 +79,18 @@ function HorizontalStepper(props) {
       backgroundColor: props.pColor,
     },
     headingText: {
-      fontFamily: 'Open-Sans',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       color: props.tColor,
       fontWeight: 600,
       fontSize: '20px',
     },
     subHeadingText: {
-      fontFamily: 'Open-Sans',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       color: props.tColor,
       fontWeight: 600,
     },
     normalText: {
-      fontFamily: 'Open-Sans',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       color: props.tColor,
     },
     code: {
@@ -122,12 +122,12 @@ function HorizontalStepper(props) {
           <p></p>
           <Typography className={classes.headingText}>Getting Started</Typography>
           <p></p>
-          <Typography className={classes.normalText}>Use  <code className={classes.code}> make style</code> to get an idea of the kinds of errors your code has to better understand
+          <Typography className={classes.normalText}>Use  <code className={classes.code}>make style</code> to get an idea of the kinds of errors your code has to better understand
           what operations you might want to select. If you are confused about the errors that come up after running make style, be sure to 
           access the <a target="_blank" href="https://inst.eecs.berkeley.edu/~cs61b/sp20/docs/style-guide.html">61B style guide</a>, and reference the guidelines posted there. These are also the same guidelines we are basing our 
           automated corrections on. </Typography>
           <p></p>
-          <Typography className={classes.normalText}> We're here to help with the <strong>objective</strong> errors - namely working with comments (Javadocs, Multiline, Single Line)
+          <Typography className={classes.normalText}>We're here to help with the <strong>objective</strong> errors - namely working with comments (Javadocs, Multiline, Single Line)
           and whitespace issues. Please plan accordingly so you know what you'll need to manually fix after using ICEcΔp!
           </Typography>
         </Paper>

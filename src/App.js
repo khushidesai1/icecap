@@ -33,7 +33,7 @@ function MainApp() {
       padding: theme.spacing(1),
     },
     text: {
-      fontFamily: 'Open-Sans',
+      fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       color: '#7E7E7E',
       margin: theme.spacing(3),
       marginLeft: theme.spacing(window.innerWidth/22),

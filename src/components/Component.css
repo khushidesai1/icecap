@@ -112,16 +112,3 @@ don't change any other css style block. just add new ones. and after you're done
     position: absolute;
     z-index: 20;
 }
-  
-@font-face {
-    font-family: 'Open-Sans';
-    font-weight: 300;
-    src: local('Open-Sans-Light'), url(../fonts/OpenSans-Light.ttf) format('truetype');
-}
-  
-@font-face {
-    font-family: 'Open-Sans';
-    font-weight: 600;
-    src: local('Open-Sans-Semi-Bold'), url(../fonts/OpenSans-SemiBold.ttf) format('truetype');
-}
-  
