@@ -112,7 +112,7 @@ function MainApp() {
             />
           </RouterSwitch>
         </div>
-        <Typography className={classes.text}>created by two fellow 61b'ers: pranati and khushi</Typography>
+        <Typography className={classes.text}>Made with <span style={{ color: "#b20000" }}>♥</span> by fellow 61b'ers: Pranati and Khushi</Typography>
       </div>
     </Router>
   );
