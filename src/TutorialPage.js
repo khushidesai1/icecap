@@ -65,18 +65,21 @@ function HorizontalStepper(props) {
     },
     stepLabel: {
       color: props.mColor,
+      fontSize: 14,
     },
     stepPaper: {
       width: window.innerWidth/1.1,
-      height: window.innerHeight/2,
+      height: window.innerHeight/2.2,
       padding: theme.spacing(3),
       backgroundColor: props.pColor,
+      overflow: 'scroll',
     },
     step4Paper: {
       width: window.innerWidth/1.1,
-      height: window.innerHeight/2,
+      height: window.innerHeight/2.2,
       padding: theme.spacing(3),
       backgroundColor: props.pColor,
+      overflow: 'scroll',
     },
     headingText: {
       fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
@@ -92,6 +95,7 @@ function HorizontalStepper(props) {
     normalText: {
       fontFamily: "-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen','Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif",
       color: props.tColor,
+      fontSize: 15,
     },
     code: {
       backgroundColor: '#000000',
@@ -324,7 +328,7 @@ function HorizontalStepper(props) {
     root: {
       color: props.mColor,
       display: 'flex',
-      height: 22,
+      height: 13,
       alignItems: 'center',
     },
     active: {
