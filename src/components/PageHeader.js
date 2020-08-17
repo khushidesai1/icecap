@@ -220,7 +220,7 @@ export default function PageHeader(props) {
               </Grow>
             )}
           </Popper>
-          <Button className={classes.button} variant="App-header" target="_blank" href="https://docs.google.com/forms/d/1A8qwG5T8pZIKmCaPYYSiEoqgzKsWMKBYmpUAqJ4zWw0/prefill" color="inherit">contact us</Button>
+          <Button className={classes.button} variant="App-header" target="_blank" href="https://docs.google.com/forms/d/1A8qwG5T8pZIKmCaPYYSiEoqgzKsWMKBYmpUAqJ4zWw0/" color="inherit">contact us</Button>
           </Toolbar>
       </AppBar>
       </div>
